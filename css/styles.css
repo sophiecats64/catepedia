@@ -1,0 +1,588 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html {
+	font-size: 20px; /*highly necessary, base pixels, every calculation is based off of this.*/
+	scroll-behavior: smooth; /*not necessary*/
+}
+
+body {
+	font-family: "Righteous", sans-serif;
+	width: 80%; /*sets the width of the page*/
+	margin: 50px auto; /*adds a margin to the page, auto means it is in center of page*/
+	color: #000; /*colours the text black.*/
+	line-height: 1.5; /*paragaph style*/
+	Background: rgb(148, 191, 197); /*colours the background a teal grey*/
+}
+/*Navbar Styles*/
+nav.navbar {
+	padding:20px; /*creates space in the navbar*/
+	background-color: #f0f5f5 !important; /*sets the colour*/
+}
+
+nav.navbar .navbar-nav { /*container - holds all links together*/
+	padding-top: 5px;
+	padding-left: 20px;
+}
+/*link*/
+nav.navbar .navbar-nav a.nav-link { /*changes the links*/
+	padding: 8px 20px; /*changes the way the links sit, ie, where they float*/
+	color: #f7954e; /*changes links to be orange*/
+	text-align: left; /*aligns text to the left*/
+	font-size: 1rem; /*changes the font size*/
+}
+
+nav.navbar .navbar-nav a.nav-link:hover {
+	color: #e3d5bc; /*changes the link when you hover over it to be creamy yellow*/
+}
+
+nav.navbar .navbar-nav .active a.nav-link {
+	font-weight: bold;
+	Color: #664e2b; /*brown*/
+	background: transparent; /*changes the value of the background - here we remove it*/
+	border-bottom: 4px solid #664e2b; /*underlines the hover*/
+}
+
+nav.navbar a.navbar-brand {
+	color: #94bfc5; /*teal blue*/
+}
+
+/*search bar*/
+form.form-inline { /*refers to the search bad in the source code*/
+	width: 25%; /*changes the width of the search bar in relavance to the navbar*/
+}
+
+form.form-inline input[type=search] { /*changes the search bar itself*/
+	border-radius: 0;
+	width: 65%;
+	font-size: 0.85rem;
+	border: 1px solid #94bfc5; /*changes the border to be 1 pixel and the colour teal grey*/
+	margin: 0;
+	background: transparent;
+	max-width: 250px; /*caps off how wide the bar can be*/
+	padding: 15px; /*adds 15px of space inside the box. 15 on all sides*/
+	color: #664e2b; /*changes colour to brown*/
+}
+
+form.form-inline input[type=search]::placeholder { /*changes the 'waiting' text in the search bar*/
+	color: #e3d5bc; 	/*creamy yellow*/
+}
+
+form.form-inline button[type=submit] { /*changes the 'search go' button*/
+	border: 1px solid #94bfc5; /*teal grey*/
+	color: #94bfc5;
+	width: 30%;
+	border-radius: 0;
+	padding: 8px 0 7px 0; /*space inside button - 8 top, none right, 7 bottom, none left*/
+	font-size: 0.85rem;
+	margin-left: -6px; 
+	max-width: 100px;
+}
+
+form.form-inline button.btn:hover {
+	background: transparent;
+	color: orange; /*changes the colour to - when you hover over the 'search go' button*/
+}
+
+/*text styles*/
+
+h1 {
+	font-size: 2.5rem; /*20px.25=50px. this is a relative measurement depending on base font size.*/
+	font-variant: normal;
+}
+
+h2 {
+	font-size:1.5rem; /*30px*/
+}
+
+h3 {
+	text-align: center;
+	font-size: 1.5rem; /*25px*/
+}
+
+h6 {
+	font-size: 1.2rem; /*25px*/
+}
+
+h1, h2, h3, h6 {
+	color: #4d3a32;
+	margin: 0 0 1rem 0; /*top, right, bottom, left.. here the space is at the bottom.*/
+} /*if colour is the same, you can group them together like so*/
+
+P { /*forms the paragarph*/
+	font-size: 1rem;
+	margin: 0 0 1rem 0;
+}
+
+ul li { /*forms the bullet point list*/
+	font-size: 0.95rem;
+	margin: 0 0 0.9rem 0;
+}
+
+/*list style*/
+ol.roman {
+	list-style-type: lower-roman;
+}
+ul li.listimage {
+background: url("../images/star.jpg") no-repeat left; /*creates a background image for the logo.*/
+	padding-left: 35px;	
+	list-style: none;
+}
+
+.bold { /*'.' is the class, which we create.*/
+	font-weight: bold;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.cColour {/*c=change colour, css has to be the Americain spelling*/
+	color: #feedcf; /*hex code, orange*/
+}
+
+dl dt {
+	font-size: 1.25rem;
+	color: #4d3a32;
+}
+
+dd {
+font-size: 1rem;
+	margin: 0 0 0 0;
+}
+
+/*link styles*/
+
+a:link, a:active, a:visited { /*no matter if you have visited it yet or not..*/
+	color: white; /*all links on background will be white*/
+	text-decoration: none; /*no decoration*/
+} 
+
+a:hover { /*adds an underline when you hover over it, could also do anything, such as make it bigger.*/
+	text-decoration: underline; /*adds an underline*/
+	color: #f7954e; /*changes to orange*/
+}
+
+/*Generic*/
+
+.backgroundC { /*changes background colour*/
+	background: rgb(215,215,215);
+}
+
+.left {
+	float: left;
+	margin: 0 1rem 1rem 0;
+}
+
+.right {
+	float: right;
+	margin: 0 0 1rem 1rem;
+}
+
+/*image styles*/
+
+/*an image/video is a fixed size, depending on px*/
+
+img, video { /*while this is a quick fix, it is better and runs smoother if you have differnet files for different devices*/
+	width: 100%; /*this means a percentage of the available pixels, needed to be responsive*/
+	height: auto; /*height resizes with width, so the image doesn't distort.*/
+	margin-bottom: 1rem;
+}
+
+#wetdry {
+	width: 100%;
+	height: auto;
+	margin-bottom: 0rem;
+}
+
+#groom2 {
+	margin-top: 3rem;
+}
+
+
+#carouselExampleIndicators1 img {
+	max-width: 100%;
+	Height: auto;
+}
+
+#history {
+	margin-top: 1rem;
+}
+
+/*overlay for images*/
+figcaption {
+			font-weight: bold;
+			font-size: 1.1em;
+		}
+	
+		
+		
+figure#adopt {
+		display: block;
+		position: relative; /*The figure needs to have a relative position so that we can position the caption absoltuely*/
+		float: right;
+		overflow: hidden;/*hidden;We also need overflow: hidden; so as we do our sliding, the caption disappears outside the boundary of the figure.*/
+		margin: 0 0px 20px 40px;
+		width: 100%;
+		height: auto;
+}
+
+
+figcaption#adopt1 {
+		position: absolute; /*Position is set relative to the parent element in this case the figure */
+		top: 0; /*Positions the caption to the top of the image*/
+		right: -100px; /*Positions the caption 500px from the right*/
+		background: rgba(0,0,0, 0.2); /*Sets the background colour for the caption with 0.25 transparency for the alpha channel */
+		color: white; /*Sets the text colour for the caption*/
+		padding: 10px 20px; /*Sets the amount of padding within the caption box */
+		font-weight: normal; /*Assigns a font-weight to the caption text */
+		text-align: right; /*Aligns the caption text */
+		opacity: 0; /*Hides the caption by default*/
+		transition: 0.6s ease;
+
+}
+	
+figure#adopt:hover figcaption {
+		opacity: 1;
+		right: 0;
+	 }
+		
+/*video*/
+#video {
+	border: 5px solid #fff;
+}
+
+
+/*table styles*/
+
+table { 
+	width: 100%; /*sets the table width*/
+	text-align: center; /*moves the text to the center*/
+	border-collapse: collapse; /*no space between borders*/
+	margin-bottom: 1rem; /*adds space above table, 60px*/
+}
+
+caption { /*alters the heading above table*/
+	font-size: 1.5rem;
+	text-align: left;
+	font-weight: bold;
+	padding: 1rem 0;
+}
+
+th { /*formates the table header*/
+	padding: 15px 10px 10px 10px; /*creates space inside an element, ensures nothing touches. top,right,bottom,left*/
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #f7954e;
+	border-bottom: 2px solid #f7954e; /*adds 2px (thick) solid black (hexcode) border to bottom*/
+	text-align:center;
+}
+
+td { /*formates the cells*/
+	font-size: 1rem;
+	color: #000;
+	padding: 10px; /*adds value to all sides*/
+	border-bottom: 1px solid #d8d8d8; /*smaller grey seperator lines*/
+	text-align: center;
+}
+
+table tr:nth-of-type(even) {
+	background-color: rgb(225,225,225);
+}
+
+table tr:nth-of-type(even):hover {
+	background-color: rgb(215,215,215);
+	cursor: pointer;
+}
+
+table tr:nth-of-type(odd) {
+	background-color: rgb(245,245,245);
+}
+
+table tr:nth-of-type(odd):hover {
+	background-color: rgb(235,235,235);
+	cursor: pointer;
+}
+
+/*card styles*/
+.btn-primary {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #f7954e;
+  border-color: #f7954e;
+}
+
+
+h5.card-text {
+	text-align: center;
+}
+
+/*Accordion Styles*/
+
+.card-header a {
+	color: #f7954e;
+	
+}
+
+.acchyper a {
+	color: #94bfc5;
+}
+
+
+/*Footer Styles*/
+footer {
+	width: 100%
+}
+footer h2 {}
+.footerL {
+	float: left;
+	padding: 0;
+	border-right: 1px solid #617c80; /*creates a grey line seperating the two rows*/
+}
+.footerR {
+	float: right;
+	text-align: right; /*since this box is on the right, it would look weird if the text wasn't aligned (or spaced) to the right.*/
+	padding: 0;
+}
+.footerR p.linked {
+	background: url("../images/Logo.jpg") no-repeat right; /*creates a background image for the logo.*/
+	padding-right: 35px;
+}
+
+/*form page*/
+#frmcomment {
+	width:90%;
+	margin: 30px auto;
+}
+
+#frmcomment label {
+	float: left;
+	width: 100%;
+	display: block;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+
+#frmcomment label span {
+	float: left;
+	width: 30%;
+	text-align: right;
+	margin-top: 10px;
+	padding-top: 5px;
+}
+
+#frmcomment label:hover span {
+	color: #fff
+}
+
+#frmcomment input {
+	float: left;
+	width: 50%;
+	border: 1px solid #999;
+	box-shadow: 0px 5px 5px #8cb4ba;
+	margin: 10px 0 0 20px;
+	padding: 20px 10px;
+	height:18px;
+}
+
+#frmcomment input[type=date] {
+	
+	padding-bottom: 30px;
+}
+
+#frmcomment input:hover, #frmcomment textarea:hover {
+	box-shadow: 5px 5px 8px #37737B;
+}
+	#frmcomment textarea {
+		float: left;
+		width: 51%;
+		margin: 8px 0 0 20px;
+		border: solid 1px #999;
+		box-shadow: 2px 8px 8px #8cb4ba;
+		padding: 10px 0 0 5px;
+	}
+	
+	select {
+		font-family: "Righteous", sans-serif;
+		width:52%;
+		padding: 12px 10px 10px 10px;
+		margin: 18px 0 0 20px;
+		border: 1px solid #999;
+		font-size: 16px;
+	}
+
+#frmcomment input[type=submit] {
+	padding: 4px 2px ; /*this changes the spacing inside the button*/
+	text-align: center;
+	width: 160px;
+	float: left;
+	color: black;
+	background: #FFAE73;
+	border: 1px solid #B45610;
+	margin: 20px 0 0 32%; /*changes the spacing outside the button*/
+	border-radius: 7px; /*how rounded the corners are*/
+	cursor: pointer;
+	height: 40px;
+}
+
+
+
+@media screen and (max-width: 992px) { /*this is a media query for what changes when the device is smaller*/
+	/*navbar + search*/
+	nav.navbar-nav {
+		padding-left: 0;
+	}
+	nav.navbar .navbar-nav a.nav-link{
+		padding: 8px 20px 8px 0;
+		width: 50%
+	}
+	from.form-inline {
+		width: 100%;
+	}
+	form.form-inline input[type=search] {/*makes it fit*/
+		width: 90%;
+	}
+	form.form-inline button[type=submit] {
+		display: none; /*hides the 'go' button*/
+		width: 0;
+	}
+/*text styles*/
+	h1 {
+	font-size: 1.5rem; 
+}
+
+h2 {
+	font-size:1rem; 
+}
+
+h3 {
+	text-align: center;
+	font-size: 1rem; 
+}
+
+h6 {
+	font-size: 0.9rem; 
+}
+	
+	h1, h2, h3, h6 {
+	margin: 0 0 0.7rem 0;
+	}
+
+
+p { 
+	font-size: 0.8rem;
+	margin: 0 0 0.7rem 0;
+	}
+	
+	/*list*/
+	ul li, ol li { /*forms the bullet point list*/
+	font-size: 0.8rem;
+	margin: 0 0 0.7rem 0;
+}
+	dl dt {
+	font-size: 1rem;
+}
+
+dd {
+font-size: 0.8rem;
+	margin: 0 0 0 0;
+}
+
+	
+/*link styles*/
+	nav.navbar .navbar-nav a.nav-link { /*changes the links*/
+	padding: 8px 20px; /*changes the way the links sit, ie, where they float*/
+	color: #f7954e; /*changes links to be orange*/
+	text-align: left; /*aligns text to the left*/
+	font-size: 1rem; /*changes the font size*/
+}
+	/*image styles*/
+	#groom2 {
+	margin-top: 0rem;
+}
+	/*footer*/
+	.footerL {
+		border-Right: none; /*removes the vertical bar*/
+		border-bottom: 1px solid #4d3a32; /*creates a horiztonal bar*/
+		padding-left: 1rem;
+	}
+	.footerR {
+		text-align: left;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 1rem;
+	}
+	.footerR p.linked {
+		background: url("../images/linkedin.png") no-repeat 80px 0;
+		padding-right: 30px
+	}
+	}
+
+@media screen and (max-width:768px) {
+	table, thead, tbody, th, td, tr, caption {
+		display: block;
+	}
+	thead tr {
+		display: none;
+	}
+	
+	table td {
+		border: none;
+		position: relative;
+		text-align: right;
+		font-size: 0.7rem;
+		border-bottom: 2px solid white;
+		
+	}
+	td:before {
+		position: absolute;
+		top: 12px;
+		left:10px;
+		width: 25%;
+		font-weight: bold;
+		white-space: nowrap;
+		text-align: left;
+		font-size: 0.7rem;
+		
+	}
+	td:nth-of-type(4) {
+		border-bottom: 4px solid white;
+	}
+	
+	/*add the row tables*/
+	td:nth-of-type(1):before {
+		content: "Behaviour:";
+	}
+	td:nth-of-type(2):before {
+		content: "Meaning:";
+	}
+	
+		td:nth-of-type(3):before {
+		content: "Response:";
+	}
+	
+	
+}
+/*more info on breeds resize*/
+@media screen and (max-width:523px) { 
+	li.nav-item {
+			  font-size: 0.7rem;
+	}
+	#tab2 {
+		margin-right: 50px;
+	}
+	#tab3 {
+		margin-right: 150px;
+		
+	}
+	#tab5 {
+		 margin-left: -2px;
+	}
+}
